@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchExpertsStart } from './redux/reducers/expertReducer';
+
 import Layout from './Layout';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, } from 'react-router-dom';
 import Home from './components/Home/Home';
@@ -14,12 +12,6 @@ import BookDemo from './components/BookDemo/BookDemo';
 
 function App() {
 
-  const dispatch = useDispatch();
-
-
-  useEffect(() => {
-    dispatch(fetchExpertsStart());
-  }, [dispatch]);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
